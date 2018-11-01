@@ -1,0 +1,49 @@
+.form-textarea__number {
+	display: none;
+}
+
+.form-textarea {
+	&-with-countdown {
+		.form-textarea__number_container {
+			text-align: right;
+			height: 0;
+			.form-textarea__number {
+				display: inline-block;
+				position: relative;
+				top: -50px;
+				right: 20px;
+				font-size: 12px;
+				font-weight: 300;
+				color: #616161;
+				opacity: 0.4;
+				&__error {
+					color: red;
+				}
+			}
+		}
+	}
+	.ant-form-item-control {
+		.ant-input {
+			display: block;
+			padding: 10px 25px 25px 15px;
+			width: 100%;
+			font-family: 'Open Sans',
+			sans-serif;
+			font-weight: 300;
+			font-size: 15px;
+			border: 1px solid #c1c1c1;
+			background: #FFFFFF;
+			transition: all 0.3s;
+			resize: none;
+			border-radius: 0;
+			&:hover {
+				border-color: #929292;
+				box-shadow: none;
+			}
+			&:focus {
+				border-color: #16b7b9;
+				box-shadow: none;
+			}
+		}
+	}
+}

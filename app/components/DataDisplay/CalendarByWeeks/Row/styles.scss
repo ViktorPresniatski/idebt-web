@@ -1,0 +1,35 @@
+.calendar-by-weeks-row {
+  display: flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  
+  .calendar-by-weeks-row-week-name {
+    padding-right: 15px;
+    text-align: right;
+    width: 15%;
+    &-text {
+      border: 1px #15b7b9 solid;
+      display: inline-block;
+      padding: 5px 15px;
+      color: #79cdd0;
+    }
+  }
+  .calendar-by-weeks-row-weekdays {
+    width: 85%;
+    display: flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+  }
+}

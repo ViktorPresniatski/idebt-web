@@ -1,0 +1,25 @@
+.file-field {
+  margin-bottom: 20px;
+  &.disabled {
+    .add-file {
+        cursor: not-allowed;
+        background-color: #e6e6e6;
+      
+        .file-plus {
+            background: #75d7d8;
+        }
+    }
+  }
+  &-dropzone {
+    width: auto;
+    height: auto;
+    border-width: 2px;
+    border-color: #b8b7b8;
+    border-style: dashed;
+    border-radius: 5px;
+  }
+  &-file-list {
+    margin-top: 10px;
+  }
+
+}

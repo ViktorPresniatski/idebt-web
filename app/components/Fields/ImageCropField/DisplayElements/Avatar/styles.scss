@@ -1,0 +1,15 @@
+.file.file_avatar {
+  width: 200px;
+  height: 200px;
+  background: #f5f5f7;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  margin-bottom: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  img {
+    width: 100%;
+  }
+}

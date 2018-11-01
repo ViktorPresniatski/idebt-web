@@ -1,0 +1,32 @@
+.file-content {
+  position: relative;
+  padding: 0 20px 0 0;
+  &-container {
+    &.valid .file {
+      &-status, &-name {
+        color: #16b7b9;
+      }
+    }
+    &.invalid .file {
+      &-status, &-name, &-error {
+        color: #f5222d;
+      }
+    }
+    .file {
+      &-status, &-name, &-remove {
+        display: inline-block;
+      }
+      &-status {
+        margin-right: 5px;
+      }
+      &-remove {
+        position: absolute;
+        cursor: pointer;
+        right: 0;
+      }
+      &-error {
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.media-field {
+  &.disabled {
+    .add-media {
+      cursor: not-allowed;
+    }
+  }
+  .image-crop-modal {
+    .ant-modal-content {
+      max-height: 100%;
+      overflow-y: auto;
+      background: #FFFFFF;
+      padding: 50px 50px 40px;
+      border-radius: 10px;
+      border: 1px solid #16B7B9;
+      position: relative;
+      width: 100%;
+      text-align: center;
+      color: #213655;
+      font-size: 17px;
+    }
+    .ant-modal-footer{
+      border: 0;
+      text-align: center;
+    }
+  }
+  .crop-slider {
+    padding: 0 20px;
+    margin-top: 10px;
+    .ant-row.ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+}

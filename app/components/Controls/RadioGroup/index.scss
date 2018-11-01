@@ -1,0 +1,15 @@
+.custom-radio-group-container {
+  .ant-radio .ant-radio-inner,
+  .ant-radio:hover .ant-radio-inner,
+  .ant-radio-focused .ant-radio-inner,
+  .ant-radio-wrapper:hover .ant-radio .ant-radio-inner {
+    width: 18px;
+    height: 18px;
+    border-color: #16b7b9;
+    &:after {
+      width: 10px;
+      height: 10px;
+      background-color: #16b7b9;
+    }
+  }
+}

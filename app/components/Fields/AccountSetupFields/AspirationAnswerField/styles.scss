@@ -1,0 +1,103 @@
+.aspiration_answer__main_collapse.ant-collapse {
+  border: 0;
+  margin-bottom: 20px;
+
+  & > .ant-collapse-item:last-child > .ant-collapse-header {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .ant-collapse-item {
+    border-radius: 0;
+    border: 0;
+    .ant-collapse-header {
+      color: #213655;
+      padding: 15px 60px 15px 40px;
+      font-size: 18px;
+      font-weight: 600;
+      background: #f4f4f4;
+      position: relative;
+      cursor: pointer;
+      border: 1px solid #ededed;
+      border-radius: 0 !important;
+      .arrow-container {
+        right: 20px;
+        top: 0;
+        position: absolute;
+        height: 100%;
+        transform: rotate(-90deg);
+        .arrow {
+          line-height: inherit;
+          top: 45%;
+          width: 15px;
+          height: 9px;
+          left: 0;
+          position: relative;
+          path {
+            stroke: #929292;
+          }
+        }
+      }
+    }
+    .ant-collapse-content {
+      border: 0;
+      .ant-collapse-content-box {
+        padding: 15px 0 0;
+      }
+    }
+  }
+}
+.aspiration-value {
+  margin-top: -10px;
+  .ant-collapse {
+    border: 0;
+    background-color: transparent;
+    padding-left: 30px;
+    .ant-collapse-item {
+      border-radius: 0;
+      &-disabled { // checkbox is not checked
+        background-color: transparent;
+        .ant-collapse-header {
+          border: 0;
+          background-color: transparent;
+          .arrow-container {
+            display: none;
+          }
+        }
+      }
+      .ant-collapse-header {
+        font-size: 16px;
+        font-weight: initial;
+        padding: 5px 15px;
+        color: #000;
+        .arrow-container {
+          right: 45px;
+          top: -11px;
+          position: absolute;
+          right: 20px;
+          top: 0;
+          .arrow {
+            line-height: initial;
+            width: 10px;
+            height: 6px;
+          }
+        }
+      }
+      .ant-collapse-content {
+        .ant-collapse-content-box {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .aspiration-value-tag-field {
+    position: relative;
+    top: 26px;
+  };
+}
+.aspiration-answer-footer {
+  margin-top: 25px;
+  i {
+    margin-left: 5px;
+  }
+};

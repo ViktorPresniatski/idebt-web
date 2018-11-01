@@ -1,0 +1,9 @@
+.image-crop-container {
+  position: relative;
+  .close-icon {
+    position: absolute;
+    cursor: pointer;
+    right: -20px;
+    top: -1px;
+  }
+}

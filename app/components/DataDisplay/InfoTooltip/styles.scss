@@ -1,0 +1,10 @@
+.help__icon {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  margin-left: 10px;
+  &:hover path,
+  &:hover circle {
+    fill: #16b7b9;
+  }
+}

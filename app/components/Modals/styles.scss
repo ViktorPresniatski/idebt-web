@@ -1,0 +1,32 @@
+.simple-modal.ant-modal {
+  .ant-modal-content {
+    max-height: 100%;
+    overflow-y: auto;
+    background: #FFFFFF;
+    padding: 50px 50px 40px;
+    border-radius: 10px;
+    border: 1px solid #16B7B9;
+    position: relative;
+    max-width: 460px;
+    width: 100%;
+    text-align: center;
+    color: #213655;
+    font-size: 17px;
+  }
+
+  .ant-modal-body {
+    padding: 0;
+  }
+
+  .simple-modal-title {
+    text-align: center;
+  }
+
+  .simple-modal-body {
+    font-size: 17px;
+  }
+
+  .simple-modal-footer {
+    margin-top: 10px;
+  }
+}

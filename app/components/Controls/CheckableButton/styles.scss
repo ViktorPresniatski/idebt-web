@@ -1,0 +1,48 @@
+.checkable-button {
+  font-size: 14px;
+  text-align: center;
+  padding: 4px 20px;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  cursor: pointer;
+  color: #b9b9b9;
+  border-color: #b9b9b9;
+  margin-bottom: 15px;
+  -moz-box-shadow: inset 0.03em 0.03em 0.3em rgba(0, 0, 0, 0.3), 0 0 2em rgba(255, 255, 255, 0.6);
+  -webkit-box-shadow: inset 0.03em 0.03em 0.3em rgba(0, 0, 0, 0.3), 0 0 2em rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0.03em 0.03em 0.3em rgba(0, 0, 0, 0.3), 0 0 2em rgba(255, 255, 255, 0.6);
+  &:hover {
+    color: #a8a8a8;
+    border-color: #a8a8a8;
+  }
+  &:active {
+    -webkit-box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.1), 0 2px 1px 0 rgba(121, 65, 135, 0.1), inset 0 0 4px 3px rgba(15, 8, 22, 0.2);
+    -moz-box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.1), 0 2px 1px 0 rgba(121, 65, 135, 0.1), inset 0 0 4px 3px rgba(15, 8, 22, 0.2);
+    box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.1), 0 2px 1px 0 rgba(121, 65, 135, 0.1), inset 0 0 4px 3px rgba(15, 8, 22, 0.2);
+  }
+  &-text {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &.checked {
+    color: #FFFFFF;
+    background: #16B7B9;
+    border-color: #16B7B9;
+    -moz-box-shadow: 0 0.12em 0.01em #3ba5bc, 0 0.12em 0.3em rgba(59, 165, 188, 0.6), 0 0.12em 2em rgba(0, 0, 0, 0.3), -0.12em 0.15em 0.2em rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0.12em 0.01em #3ba5bc, 0 0.12em 0.3em rgba(59, 165, 188, 0.6), 0 0.12em 2em rgba(0, 0, 0, 0.3), -0.12em 0.15em 0.2em rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.12em 0.01em #3ba5bc, 0 0.12em 0.3em rgba(59, 165, 188, 0.6), 0 0.12em 2em rgba(0, 0, 0, 0.3), -0.12em 0.15em 0.2em rgba(0, 0, 0, 0.2);
+    &:hover {
+      color: #FFFFFF;
+      background: #15A9AB;
+      border-color: #15A9AB;
+    }
+    &:active {
+      -webkit-box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px #16989c, 0 2px 1px 0 rgba(121, 65, 135, 0.5), inset 0 0 4px 3px rgba(15, 8, 22, 0.15);
+      -moz-box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px #16989c, 0 2px 1px 0 rgba(121, 65, 135, 0.5), inset 0 0 4px 3px rgba(15, 8, 22, 0.15);
+      box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px #16989c, 0 2px 1px 0 rgba(121, 65, 135, 0.5), inset 0 0 4px 3px rgba(15, 8, 22, 0.15);
+      border-color: #159195;
+    }
+  }
+}

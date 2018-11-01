@@ -1,0 +1,21 @@
+.form-switch {
+	display: table;
+	&.inline__label {
+		.label {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.ant-form-item {
+			margin: 0 5px;
+			min-width: 45px;
+		}
+	}
+	.ant-form-item .ant-form-item-children {
+		.ant-switch-checked {
+   		background-color: #16b7b9;
+		}
+		&:after {
+			display: none;
+		}
+	}
+}

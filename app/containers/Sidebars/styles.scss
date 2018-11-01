@@ -1,0 +1,59 @@
+.user_sidebar {
+  text-align: center;
+  padding: 40px 25px 20px;
+  margin-bottom: 10px;
+  background: #16b7b9;
+  .avatar {
+    &__container {
+      height: 86px;
+      width: 86px;
+    }
+    &__link {
+      color: inherit;
+      &:focus {
+        text-decoration: inherit;
+      }
+    }
+  }
+  .logo__container {
+    height: 60px;
+    width: 210px;
+    margin-bottom: 10px;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+.avatar__image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-color: 50%;
+}
+
+.full_name__container {
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 19px;
+  width: 100%;
+  white-space: nowrap;
+  // padding-right: 15px;
+  position: relative;
+}
+
+.dropdown_link {
+  color: white;
+  width: 100%;
+  position: relative;
+  &__icon {
+    position: absolute;
+    right: 0;
+    top: 6px;
+  }
+}

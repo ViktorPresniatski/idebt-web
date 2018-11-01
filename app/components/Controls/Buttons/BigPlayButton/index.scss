@@ -1,0 +1,26 @@
+.video-react .video-react-big-play-button.big-play-button {
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border: 2px solid #FFFFFF;
+  cursor: pointer;
+  border-radius: 0;
+  width: auto;
+  line-height: 40px;
+  margin-left: 0;
+  &:before {
+    display: none;
+  }
+  .big-play-button-text {
+    font-family: 'Open Sans', sans-serif !important;
+    position: relative;
+    font-size: 16px;
+    top: -17px;
+  }
+  &.control-disabled {
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,22 @@
+.info-tooltip {
+  .ant-tooltip-inner {
+    background: #59b7c1;
+    color: #FFFFFF;
+    font-size: 12px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &.ant-tooltip-placement-top {
+    max-width: 500px;
+    .ant-tooltip-arrow {
+      border-top-color: #59b7c1;
+    }
+    .ant-tooltip-inner {
+      max-height: 150px;
+      width: max-content;
+      max-width: 500px;
+    }
+  }
+}

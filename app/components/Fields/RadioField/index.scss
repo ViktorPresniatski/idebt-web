@@ -1,0 +1,28 @@
+.radio_field {
+  .ant-radio-wrapper {
+    font-size: 16px;
+    color: #3f3f3f;
+  }
+
+  .form__label {
+    line-height: 39px;
+  }
+  .ant-form-item {
+    margin: 0 0 25px;
+    .ant-form-item-label {
+      line-height: 22px;
+    }
+    .ant-form-item-control .ant-form-item-children {
+      .ant-radio-group .ant-radio-inner {
+        width: 18px;
+        height: 18px;
+        border-color: #16b7b9;
+        &:after {
+          width: 10px;
+          height: 10px;
+          background-color: #16b7b9;
+        }
+      }
+    }
+  }
+}

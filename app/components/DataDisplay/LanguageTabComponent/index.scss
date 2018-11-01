@@ -1,0 +1,28 @@
+.language-tab {
+  width: 100%;
+  text-align: center;
+  background-color: #16cacc;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  padding: 3px 10px;
+  display: flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  &.active-tab {
+    color: #fff;
+    background-color: #15a8a9;
+  }
+  &:not(.active-tab):hover {
+    background-color: #16cacc;
+  }
+}

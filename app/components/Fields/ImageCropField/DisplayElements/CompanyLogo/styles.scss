@@ -1,0 +1,14 @@
+.file.file_company_logo {
+  background: transparent;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  margin-bottom: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  img {
+    max-width: 260px;
+    max-height: 60px;
+  }
+}

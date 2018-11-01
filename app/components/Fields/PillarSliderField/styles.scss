@@ -1,0 +1,104 @@
+.pillar-slider-field {
+    .scale-block {
+        position: relative;
+        max-width: 370px;
+        margin: auto;
+    }
+    .scale {
+        position: absolute;
+        visibility: hidden;
+        left: 50%;
+
+        &.visible {
+            visibility: visible;
+        }
+    }
+    .scale__text {
+        width: 110px;
+        height: 38px;
+        padding: 3px 10px;
+        left: -55px;
+        text-align: center;
+        color: #FFFFFF;
+        font-size: 12px;
+        border-radius: 3px;
+        position: absolute;
+        line-height: 1.3;
+        top: -70px;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 6px;
+            border-style: solid;
+        }
+    }
+    .scale_dark-red {
+        .scale__text {
+            background: #a62226;
+        }
+        .scale__text::after {
+            border-color:  #a62226 transparent transparent transparent;
+        }
+    }
+    .scale_red {
+        .scale__text {
+            background: #c9391c;
+        }
+        .scale__text::after {
+            border-color: #c9391c transparent transparent transparent;
+        }
+    }
+    .scale_red-orange {
+        .scale__text {
+            background: #f55119;
+        }
+        .scale__text::after {
+            border-color: #f55119 transparent transparent transparent;
+        }
+    }
+    .scale_orange {
+        .scale__text {
+            background: #ff8b19;
+            padding: 10px;
+        }
+        .scale__text::after {
+            border-color: #ff8b19 transparent transparent transparent;
+        }
+    }
+    .scale_yellow {
+        .scale__text {
+            background: #fbc119;
+        }
+        .scale__text::after {
+            border-color: #fbc219 transparent transparent transparent;
+        }
+    }
+    .scale_light-green {
+        .scale__text {
+            background: #76dd11;
+        }
+        .scale__text::after {
+            border-color: #76dd11 transparent transparent transparent;
+        }
+    }
+    .scale_green {
+        .scale__text {
+            background: #40c21a;
+        }
+        .scale__text::after {
+            border-color: #40c21a transparent transparent transparent;
+        }
+    }
+    .scale_dark-green {
+        .scale__text {
+            background: #389f19;
+        }
+        .scale__text::after {
+            border-color: #389f19 transparent transparent transparent;
+        }
+    }    
+}

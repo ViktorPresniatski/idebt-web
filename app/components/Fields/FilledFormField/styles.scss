@@ -1,0 +1,27 @@
+.info__param {
+  font-size: 15px;
+}
+
+.info__data {
+  color: #213655;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.info__icon {
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  svg {
+    height: 16.5px;
+  }
+}
+
+.info__icon_map {
+  width: 11px;
+}
+
+.info__text {
+  display: inline-block;
+  vertical-align: middle;
+}
