@@ -1,0 +1,68 @@
+.master-root-wrapper {
+  margin: 20px auto;
+  position: relative;
+  height: 500px;
+  width: 700px;
+  background: #ff6662;
+}
+
+.return-button {
+  position: absolute;
+  left: 255px;
+  top: 210px;
+  p {
+    margin-bottom: 5px;
+    color: white;
+    text-align: center;
+  }
+}
+
+.master-root {
+  margin: 20px auto;
+  position: relative;
+  height: 500px;
+  width: 700px;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+
+  padding: 10px 0;
+  min-height: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 25px;
+  -ms-flex-direction: row;
+  -ms-justify-content: center;
+  box-shadow: 0 0 12px rgba(5, 16, 44, 0.13);
+
+  .alert-visible {
+    position: absolute;
+    width: 90px;
+    padding: 15px;
+    &.alert-left {
+      border-radius: 0 25px 25px 0;
+      left: 0;
+      background: black;
+    }
+    &.alert-right {
+      border-radius: 25px 0 0 25px;
+      right: 0;
+      background: green;
+    }
+  }
+}
+.card {
+  padding: 15px;
+  background-color: #fff;
+  background-size: cover;
+  position: absolute;
+  left: 0px;
+  background: #f8d2c4;
+  height: 400px;
+  width: 400px;
+  margin: 0 auto;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+  box-shadow: 0 0 5px rgba(5, 16, 44, 0.13);
+  cursor: pointer;
+}
