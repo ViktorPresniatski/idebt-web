@@ -1,0 +1,87 @@
+.my_answers {
+  .content__wrapper.monthly-questions-wrapper {
+    padding: 30px 20px;
+    .ant-collapse {
+      margin-bottom: 20px;
+    }
+  }
+  .content__wrapper.aspirations-wrapper {
+    padding: 20px 20px;
+  }
+  .content__title__text {
+    margin-bottom: 25px;
+  }
+  .form-wrapper {
+    padding: 0 20px;
+    position: relative;
+  }
+  .aspirations-content {
+    position: relative;
+  }
+  .aspiration-title-wrapper {
+    text-align: center;
+  }
+  .aspiration-title-text {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: black;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .questions-date {
+    position: absolute;
+    color: #16b7b9;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .aspiration-modified-date {
+    position: absolute;
+    color: #16b7b9;
+    font-size: 14px;
+    width: 20%;
+  }
+  .no-metrics-available {
+    width: 100%;
+    text-align: center;
+  }
+
+  @media (max-width: 767px) {
+    .form-wrapper.aspirations {
+      padding-top: 30px;
+    }
+    .aspiration-title-text,
+    .aspiration-modified-date {
+      width: 100%;
+    }
+  }
+  .ant-modal-content {
+    width: 600px;
+    max-width: 700px;
+    text-align: initial;
+  }
+  .wisdom-container {
+    width: 50%;
+    margin: auto;
+  }
+  .wisdom-info-modal-row {
+    width: 100%;
+    margin-bottom: 10px;
+    // text-align: center;
+    .wisdom-info-modal-column-label {
+      font-weight: 600;
+    }
+    .wisdom-info-modal-column-content .wisdom-info {
+      &-email-subject,
+      &-wisdom-body {
+        margin-bottom: 10px;
+      }
+      &-email-body {
+        margin-bottom: 25px;
+      }
+      &-media .file {
+        margin: 0;
+      }
+    }
+  }
+}
