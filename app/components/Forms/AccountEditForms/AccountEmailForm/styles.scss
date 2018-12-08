@@ -1,0 +1,23 @@
+.account-notifications-form {
+  margin: 'auto';
+  &-email-notification-container {
+    margin-bottom: 24px;
+  }
+  &-checkbox-container {
+    margin-right: 10px;
+    min-width: 70px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .account-notifications-form-checkbox-container {
+    text-align: right;
+  }
+}
+
+@media (max-width: 1200px) {
+  .account-notifications-form-checkbox-container {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}

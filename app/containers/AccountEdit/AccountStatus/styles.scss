@@ -1,0 +1,45 @@
+.account-status-info {
+  .content__wrapper.monthly-questions-wrapper {
+    padding: 30px 20px;
+  }
+  .content__wrapper.aspirations-wrapper {
+    padding: 20px 20px;
+  }
+  .form-wrapper {
+    padding: 0 20px;
+    position: relative;
+  }
+  @media (max-width: 767px) {
+    .form-wrapper.aspirations {
+      padding-top: 30px;
+    }
+    .aspiration-title-text,
+    .aspiration-modified-date {
+      width: 100%;
+    }
+  }
+  .wisdom-container {
+    width: 100%;
+    margin: auto;
+  }
+  .wisdom-info-modal-row {
+    width: 100%;
+    margin-bottom: 10px;
+    // text-align: center;
+    .wisdom-info-modal-column-label {
+      font-weight: 600;
+    }
+    .wisdom-info-modal-column-content .wisdom-info {
+      &-email-subject,
+      &-wisdom-body {
+        margin-bottom: 10px;
+      }
+      &-email-body {
+        margin-bottom: 25px;
+      }
+      &-media .file {
+        margin: 0;
+      }
+    }
+  }
+}
