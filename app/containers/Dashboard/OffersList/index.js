@@ -145,7 +145,6 @@ class OffersList extends React.Component {
                       </Col>
                     </Row>
                   </Row>
-                </Row>
                 </Panel>
               ))}
             </Collapse>
