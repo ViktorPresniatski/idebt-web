@@ -23,7 +23,7 @@ export const currentUserUpdateError = data => ({
 
 export const updateCurrentUserPasswordRequest = data => ({
   type: CURRENT_USER_UPDATE_PASSWORD_REQUEST,
-  data
+  data,
 });
 
 export const manageBalanceRequest = data => ({

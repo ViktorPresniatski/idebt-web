@@ -1,5 +1,10 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { updateCurrentUserApi, updateCurrentUserPasswordApi, replenishBalanceApi, withdrawBalanceApi } from 'api/requests';
+import {
+  updateCurrentUserApi,
+  updateCurrentUserPasswordApi,
+  replenishBalanceApi,
+  withdrawBalanceApi,
+} from 'api/requests';
 
 import { getCurrentUserRequest } from 'containers/App/actions';
 import { CURRENT_USER_UPDATE_REQUEST, CURRENT_USER_UPDATE_PASSWORD_REQUEST, MANAGE_BALANCE_REQUEST } from './constants';

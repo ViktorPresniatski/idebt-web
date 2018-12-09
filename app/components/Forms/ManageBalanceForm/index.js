@@ -11,10 +11,7 @@ import { InputField } from 'components/Fields';
 import { GreenButton } from 'components/Controls';
 import './styles.scss';
 
-const OPERATIONS = [
-  { label: 'Replenish', value: 'replenish' },
-  { label: 'Withdraw', value: 'withdraw' },
-];
+const OPERATIONS = [{ label: 'Replenish', value: 'replenish' }, { label: 'Withdraw', value: 'withdraw' }];
 
 class ManageBalanceForm extends React.Component {
   handleIdentityChange = () => {
@@ -66,6 +63,4 @@ const withForm = reduxForm({
   form: 'ManageBalanceForm',
 });
 
-export default compose(
-  withForm,
-)(ManageBalanceForm);
+export default compose(withForm)(ManageBalanceForm);

@@ -30,18 +30,18 @@ class CreditCardForm extends React.Component {
               type="text"
               component={InputField}
               onChange={this.handleIdentityChange}
-              placeholder={'Card Number'}
+              placeholder="Card Number"
               validate={required}
             />
           </Col>
         </Row>
-        <Row gutter={16} className="wisdom-info-modal-row">        
+        <Row gutter={16} className="wisdom-info-modal-row">
           <Col>
             <Field
               name="cardholder_name"
               type="text"
               component={InputField}
-              placeholder={'Cardholder Name'}
+              placeholder="Cardholder Name"
               onChange={this.handleIdentityChange}
               validate={required}
             />
@@ -53,7 +53,7 @@ class CreditCardForm extends React.Component {
               name="valid_thru"
               type="text"
               component={InputField}
-              placeholder={'Valid Thru'}
+              placeholder="Valid Thru"
               onChange={this.handleIdentityChange}
               validate={required}
             />
@@ -63,7 +63,7 @@ class CreditCardForm extends React.Component {
               name="cvc"
               type="text"
               component={InputField}
-              placeholder={'CVC'}
+              placeholder="CVC"
               onChange={this.handleIdentityChange}
               validate={[required, onlyNumber]}
             />
@@ -89,6 +89,4 @@ const withForm = reduxForm({
   form: 'CreditCardForm',
 });
 
-export default compose(
-  withForm,
-)(CreditCardForm);
+export default compose(withForm)(CreditCardForm);

@@ -32,7 +32,7 @@ class AccountEdit extends React.PureComponent {
     this.props.getCurrentUserRequest();
   }
 
-  handleSubmit = (formData) => {
+  handleSubmit = formData => {
     const data = formData.toJS();
 
     return new Promise((resolve, reject) => {
@@ -73,8 +73,7 @@ class AccountEdit extends React.PureComponent {
       console.log(data);
       this.props.updateCurrentUserPasswordRequest({ data, handleErrors, handleSuccess });
     });
-
-  }
+  };
 
   render() {
     const { currentUser } = this.props;
@@ -83,29 +82,21 @@ class AccountEdit extends React.PureComponent {
       <div className="account-edit-container">
         <div className="account-edit-container-row">
           <HalfPlate>
-            <PlateTitle>
-              Account status
-            </PlateTitle>
-          <AccountStatus user={currentUser} manageBalance={this.props.manageBalanceRequest} />
+            <PlateTitle>Account status</PlateTitle>
+            <AccountStatus user={currentUser} manageBalance={this.props.manageBalanceRequest} />
           </HalfPlate>
           <HalfPlate>
-            <PlateTitle>
-              Update profile info
-            </PlateTitle>
+            <PlateTitle>Update profile info</PlateTitle>
             <AccountPersonalInfoForm user={currentUser} onSubmit={this.handleSubmit} />
           </HalfPlate>
         </div>
         <div className="account-edit-container-row">
           <HalfPlate>
-            <PlateTitle>
-              Change email
-            </PlateTitle>
+            <PlateTitle>Change email</PlateTitle>
             <AccountEmailForm user={currentUser} onSubmit={this.handleSubmit} />
           </HalfPlate>
           <HalfPlate>
-            <PlateTitle>
-              Change password
-            </PlateTitle>
+            <PlateTitle>Change password</PlateTitle>
             <AccountPasswordForm onSubmit={this.handlePasswordChange} />
           </HalfPlate>
         </div>
@@ -114,8 +105,7 @@ class AccountEdit extends React.PureComponent {
   }
 }
 
-AccountEdit.propTypes = {
-};
+AccountEdit.propTypes = {};
 
 const mapDispatchToProps = {
   manageBalanceRequest,

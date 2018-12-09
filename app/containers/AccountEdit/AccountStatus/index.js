@@ -29,15 +29,15 @@ class AccountStatus extends React.Component {
     this.setState({ isModalOpened: false, isCreditCardModalOpened: false });
   };
 
-  handleBalanceChange = (formData) => {
+  handleBalanceChange = formData => {
     const data = formData.toJS();
     data.userId = this.props.user.id;
     console.log(data);
 
     return new Promise((resolve, reject) => {
-      const handleErrors = (errors) => {
+      const handleErrors = errors => {
         reject(new SubmissionError(errors));
-      }
+      };
 
       const handleSuccess = () => {
         resolve();
@@ -46,11 +46,11 @@ class AccountStatus extends React.Component {
           message: 'Success',
         });
         this.closeModal();
-      }
+      };
 
       this.props.manageBalance({ data, handleSuccess, handleErrors });
     });
-  }
+  };
 
   render() {
     const { user } = this.props;
@@ -92,7 +92,7 @@ class AccountStatus extends React.Component {
                   rating={user ? user.rating / 10 : 0}
                   starRatedColor="yellow"
                   numberOfStars={5}
-                  name='rating'
+                  name="rating"
                   starDimension="25px"
                   starSpacing="0px"
                 />
@@ -103,19 +103,13 @@ class AccountStatus extends React.Component {
                 <a onClick={this.openModal}>Manage balance</a>
               </Col>
             </Row>
-            {/*<Row gutter={16} className="wisdom-info-modal-row">
+            {/* <Row gutter={16} className="wisdom-info-modal-row">
               <Col offset={3} span={21}>
                 <a onClick={this.openCreditCardModal}>Manage credit card</a>
               </Col>
-            </Row>*/}
+            </Row> */}
             <Row gutter={16} className="wisdom-info-modal-row">
-              <Cards
-                number={''}
-                name={'Cardholder name'}
-                expiry={''}
-                cvc={123}
-                preview={true}
-              />
+              <Cards number="" name="Cardholder name" expiry="" cvc={123} preview />
             </Row>
           </Row>
           {this.state.isModalOpened && (
@@ -132,7 +126,7 @@ class AccountStatus extends React.Component {
               <ManageBalanceForm onCancel={this.closeModal} onSubmit={this.handleBalanceChange} />
             </ModalWithTitle>
           )}
-          {/*this.state.isCreditCardModalOpened && (
+          {/* this.state.isCreditCardModalOpened && (
             <ModalWithTitle
               visible={this.state.isCreditCardModalOpened}
               closeModal={this.closeModal}
@@ -145,7 +139,7 @@ class AccountStatus extends React.Component {
             >
               <CreditCardForm onCancel={this.closeModal} onSubmit={this.handleCreditCardChange} />
             </ModalWithTitle>
-           )*/}
+           ) */}
         </div>
       </div>
     );
