@@ -66,56 +66,62 @@ class IssuesList extends React.Component {
     </div>
   );
 
-  render() {
+  renderContent = () => {
     const { issues } = this.props;
 
     if (!issues || issues.results.length === 0) {
-      return <div className="content__wrapper empty-message">There are no issues yet</div>;
+      return <div className="empty-message">There are no issues yet</div>;
     }
 
+    return (
+      <Collapse>
+        {issues.results.map(issue => (
+          <Panel header={this.renderHeader(issue)} key={issue.id}>
+            <Row justify="center" className="wisdom-container">
+              <Row gutter={16} className="wisdom-info-modal-row">
+                <Col offset={4} span={12} className="wisdom-info-modal-column-label">
+                  Amount
+                </Col>
+                <Col span={8} className="wisdom-info-modal-column-content">
+                  {issue.amount}
+                </Col>
+              </Row>
+              <Row gutter={16} className="wisdom-info-modal-row">
+                <Col offset={4} span={12} className="wisdom-info-modal-column-label">
+                  Maximum overpay
+                </Col>
+                <Col span={8} className="wisdom-info-modal-column-content">
+                  {issue.max_overpay}
+                </Col>
+              </Row>
+              <Row gutter={16} className="wisdom-info-modal-row">
+                <Col offset={4} span={12} className="wisdom-info-modal-column-label">
+                  Minimum credit period in days
+                </Col>
+                <Col span={8} className="wisdom-info-modal-column-content">
+                  {issue.min_credit_period}
+                </Col>
+              </Row>
+              <Row>
+                <Col offset={4} span={12} className="wisdom-info-modal-column-label">
+                  <a href={`/search?target=issues&object_id=${issue.id}`}>
+                    <GreenBorderButton>Search suitable offers</GreenBorderButton>
+                  </a>
+                </Col>
+              </Row>
+            </Row>
+          </Panel>
+        ))}
+      </Collapse>
+    );
+  };
+
+  render() {
     return (
       <div className="content__wrapper monthly-questions-wrapper">
         <div>
           <div className="form-wrapper">
-            <Collapse>
-              {issues.results.map(issue => (
-                <Panel header={this.renderHeader(issue)} key={issue.id}>
-                  <Row justify="center" className="wisdom-container">
-                    <Row gutter={16} className="wisdom-info-modal-row">
-                      <Col offset={4} span={12} className="wisdom-info-modal-column-label">
-                        Amount
-                      </Col>
-                      <Col span={8} className="wisdom-info-modal-column-content">
-                        {issue.amount}
-                      </Col>
-                    </Row>
-                    <Row gutter={16} className="wisdom-info-modal-row">
-                      <Col offset={4} span={12} className="wisdom-info-modal-column-label">
-                        Maximum overpay
-                      </Col>
-                      <Col span={8} className="wisdom-info-modal-column-content">
-                        {issue.max_overpay}
-                      </Col>
-                    </Row>
-                    <Row gutter={16} className="wisdom-info-modal-row">
-                      <Col offset={4} span={12} className="wisdom-info-modal-column-label">
-                        Minimum credit period in days
-                      </Col>
-                      <Col span={8} className="wisdom-info-modal-column-content">
-                        {issue.min_credit_period}
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col offset={4} span={12} className="wisdom-info-modal-column-label">
-                        <a href={`/search?target=issues&object_id=${issue.id}`}>
-                          <GreenBorderButton>Search suitable offers</GreenBorderButton>
-                        </a>
-                      </Col>
-                    </Row>
-                  </Row>
-                </Panel>
-              ))}
-            </Collapse>
+            {this.renderContent()}
             <GreenButton type="primary" onClick={this.openModal}>
               Create new issue
             </GreenButton>

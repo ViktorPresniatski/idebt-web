@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { reduxForm, Field } from 'redux-form/immutable';
 
-import { required, email, onlyNumberWithFloat, equalWithPassword, minLength8 } from 'utils/validations';
+import { required, email, onlyNumber, equalWithPassword, minLength8 } from 'utils/validations';
 import { InputField } from 'components/Fields';
 import { GreenButton } from 'components/Controls';
 import './styles.scss';
@@ -22,48 +22,18 @@ class AccountPersonalInfoForm extends React.Component {
 
     return (
       <form className="form" onSubmit={handleSubmit}>
-        <Field
-          name="first_name"
-          component={InputField}
-          label="First Name"
-          validate={required}
-          inlineLabel
-        />
-        <Field
-          name="last_name"
-          component={InputField}
-          label="Last Name"
-          validate={required}
-          inlineLabel
-        />
-        <Field
-          name="emp_title"
-          component={InputField}
-          label="Job title"
-          validate={required}
-          inlineLabel
-        />
+        <Field name="first_name" component={InputField} label="First Name" validate={required} inlineLabel />
+        <Field name="last_name" component={InputField} label="Last Name" validate={required} inlineLabel />
+        <Field name="emp_title" component={InputField} label="Job title" validate={required} inlineLabel />
         <Field
           name="annual_income"
           component={InputField}
           label="Annual income, $"
-          validate={[required, onlyNumberWithFloat]}
+          validate={[required, onlyNumber]}
           inlineLabel
         />
-        <Field
-          name="telephone"
-          component={InputField}
-          label="Phone number"
-          validate={required}
-          inlineLabel
-        />
-        <Field
-          name="passport_number"
-          component={InputField}
-          label="Passport number"
-          validate={required}
-          inlineLabel
-        />
+        <Field name="telephone" component={InputField} label="Phone number" validate={required} inlineLabel />
+        <Field name="passport_number" component={InputField} label="Passport number" validate={required} inlineLabel />
         <div className="center">
           <GreenButton type="primary" htmlType="submit" disabled={submitting || invalid}>
             Save
@@ -83,7 +53,6 @@ const withForm = reduxForm({
   form: 'AccountPersonalInfoForm',
   enableReinitialize: true,
 });
-
 
 const mapStateToProps = (state, ownProps) => {
   if (ownProps.user) {
@@ -105,9 +74,7 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-const withConnect = connect(
-  mapStateToProps,
-);
+const withConnect = connect(mapStateToProps);
 
 export default compose(
   withConnect,

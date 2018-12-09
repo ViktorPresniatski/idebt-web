@@ -66,88 +66,94 @@ class OffersList extends React.Component {
     </div>
   );
 
-  render() {
+  renderContent = () => {
     const { offers } = this.props;
 
     if (!offers || offers.results.length === 0) {
-      return <div className="content__wrapper empty-message">There are no offers yet</div>;
+      return <div className="empty-message">There are no offers yet</div>;
     }
 
+    return (
+      <Collapse>
+        {offers.results.map(offer => (
+          <Panel header={this.renderHeader(offer)} key={offer.id}>
+            <Row justify="center" className="wisdom-container">
+              <Row gutter={16} className="wisdom-info-modal-row">
+                <Col offset={4} span={12} className="wisdom-info-modal-column-label">
+                  Fund
+                </Col>
+                <Col span={8} className="wisdom-info-modal-column-content">
+                  {offer.credit_fund}
+                </Col>
+              </Row>
+              <Row gutter={16} className="wisdom-info-modal-row">
+                <Col offset={4} span={12} className="wisdom-info-modal-column-label">
+                  Minimum loan size
+                </Col>
+                <Col span={8} className="wisdom-info-modal-column-content">
+                  {offer.min_loan_size}
+                </Col>
+              </Row>
+              <Row gutter={16} className="wisdom-info-modal-row">
+                <Col offset={4} span={12} className="wisdom-info-modal-column-label">
+                  Maximum loan size
+                </Col>
+                <Col span={8} className="wisdom-info-modal-column-content">
+                  {offer.max_loan_size}
+                </Col>
+              </Row>
+              <Row gutter={16} className="wisdom-info-modal-row">
+                <Col offset={4} span={12} className="wisdom-info-modal-column-label">
+                  Credit percentage
+                </Col>
+                <Col span={8} className="wisdom-info-modal-column-content">
+                  {offer.credit_percentage} %
+                </Col>
+              </Row>
+              <Row gutter={16} className="wisdom-info-modal-row">
+                <Col offset={4} span={12} className="wisdom-info-modal-column-label">
+                  With capitalization
+                </Col>
+                <Col span={8} className="wisdom-info-modal-column-content">
+                  {offer.is_with_capitalization ? 'Yes' : 'No'}
+                </Col>
+              </Row>
+              <Row gutter={16} className="wisdom-info-modal-row">
+                <Col offset={4} span={12} className="wisdom-info-modal-column-label">
+                  Grace period
+                </Col>
+                <Col span={8} className="wisdom-info-modal-column-content">
+                  {offer.grace_period} days
+                </Col>
+              </Row>
+              <Row gutter={16} className="wisdom-info-modal-row">
+                <Col offset={4} span={12} className="wisdom-info-modal-column-label">
+                  Return period
+                </Col>
+                <Col span={8} className="wisdom-info-modal-column-content">
+                  {offer.return_period} days
+                </Col>
+              </Row>
+              <Row>
+                <Col offset={4} span={12} className="wisdom-info-modal-column-label">
+                  <a href={`/search?target=offers&object_id=${offer.id}`}>
+                    <GreenBorderButton>Search suitable issues</GreenBorderButton>
+                  </a>
+                </Col>
+              </Row>
+            </Row>
+          </Panel>
+        ))}
+      </Collapse>
+    );
+  };
+
+  render() {
     return (
       <div className="content__wrapper monthly-questions-wrapper">
         <div>
           <div className="form-wrapper">
-            <Collapse>
-              {offers.results.map(offer => (
-                <Panel header={this.renderHeader(offer)} key={offer.id}>
-                  <Row justify="center" className="wisdom-container">
-                    <Row gutter={16} className="wisdom-info-modal-row">
-                      <Col offset={4} span={12} className="wisdom-info-modal-column-label">
-                        Fund
-                      </Col>
-                      <Col span={8} className="wisdom-info-modal-column-content">
-                        {offer.credit_fund}
-                      </Col>
-                    </Row>
-                    <Row gutter={16} className="wisdom-info-modal-row">
-                      <Col offset={4} span={12} className="wisdom-info-modal-column-label">
-                        Minimum loan size
-                      </Col>
-                      <Col span={8} className="wisdom-info-modal-column-content">
-                        {offer.min_loan_size}
-                      </Col>
-                    </Row>
-                    <Row gutter={16} className="wisdom-info-modal-row">
-                      <Col offset={4} span={12} className="wisdom-info-modal-column-label">
-                        Maximum loan size
-                      </Col>
-                      <Col span={8} className="wisdom-info-modal-column-content">
-                        {offer.max_loan_size}
-                      </Col>
-                    </Row>
-                    <Row gutter={16} className="wisdom-info-modal-row">
-                      <Col offset={4} span={12} className="wisdom-info-modal-column-label">
-                        Credit percentage
-                      </Col>
-                      <Col span={8} className="wisdom-info-modal-column-content">
-                        {offer.credit_percentage} %
-                      </Col>
-                    </Row>
-                    <Row gutter={16} className="wisdom-info-modal-row">
-                      <Col offset={4} span={12} className="wisdom-info-modal-column-label">
-                        With capitalization
-                      </Col>
-                      <Col span={8} className="wisdom-info-modal-column-content">
-                        {offer.is_with_capitalization ? 'Yes' : 'No'}
-                      </Col>
-                    </Row>
-                    <Row gutter={16} className="wisdom-info-modal-row">
-                      <Col offset={4} span={12} className="wisdom-info-modal-column-label">
-                        Grace period
-                      </Col>
-                      <Col span={8} className="wisdom-info-modal-column-content">
-                        {offer.grace_period} days
-                      </Col>
-                    </Row>
-                    <Row gutter={16} className="wisdom-info-modal-row">
-                      <Col offset={4} span={12} className="wisdom-info-modal-column-label">
-                        Return period
-                      </Col>
-                      <Col span={8} className="wisdom-info-modal-column-content">
-                        {offer.return_period} days
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col offset={4} span={12} className="wisdom-info-modal-column-label">
-                        <a href={`/search?target=offers&object_id=${offer.id}`}>
-                          <GreenBorderButton>Search suitable issues</GreenBorderButton>
-                        </a>
-                      </Col>
-                    </Row>
-                  </Row>
-                </Panel>
-              ))}
-            </Collapse>
+            {this.renderContent()}
             <GreenButton type="primary" onClick={this.openModal}>
               Create new offer
             </GreenButton>
