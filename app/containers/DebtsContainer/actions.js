@@ -34,4 +34,3 @@ export const getContractRequest = data => ({
   type: GET_CONTRACT_REQUEST,
   data,
 });
-

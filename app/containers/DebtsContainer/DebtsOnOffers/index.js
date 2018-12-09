@@ -46,10 +46,6 @@ const mapStateToProps = createStructuredSelector({
   offersDebts: makeSelectOffersDebts(),
 });
 
-const withConnect = connect(
-  mapStateToProps,
-);
+const withConnect = connect(mapStateToProps);
 
-export default compose(
-  withConnect,
-)(DebtsOnOffers);
+export default compose(withConnect)(DebtsOnOffers);
