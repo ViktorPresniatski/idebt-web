@@ -22,7 +22,7 @@ import AccountEmailForm from 'components/Forms/AccountEditForms/AccountEmailForm
 import AccountPersonalInfoForm from 'components/Forms/AccountEditForms/AccountPersonalInfoForm';
 
 import AccountStatus from './AccountStatus';
-import { currentUserUpdateRequest, updateCurrentUserPasswordRequest } from './actions';
+import { currentUserUpdateRequest, updateCurrentUserPasswordRequest, manageBalanceRequest } from './actions';
 import reducer from './reducer';
 import saga from './saga';
 import './styles.scss';
@@ -86,7 +86,7 @@ class AccountEdit extends React.PureComponent {
             <PlateTitle>
               Account status
             </PlateTitle>
-          <AccountStatus user={currentUser} />
+          <AccountStatus user={currentUser} manageBalance={this.props.manageBalanceRequest} />
           </HalfPlate>
           <HalfPlate>
             <PlateTitle>
@@ -118,6 +118,7 @@ AccountEdit.propTypes = {
 };
 
 const mapDispatchToProps = {
+  manageBalanceRequest,
   getCurrentUserRequest,
   currentUserUpdateRequest,
   updateCurrentUserPasswordRequest,

@@ -3,6 +3,7 @@ import {
   CURRENT_USER_UPDATE_SUCCESS,
   CURRENT_USER_UPDATE_ERROR,
   CURRENT_USER_UPDATE_PASSWORD_REQUEST,
+  MANAGE_BALANCE_REQUEST,
 } from './constants';
 
 export const currentUserUpdateRequest = data => ({
@@ -23,4 +24,9 @@ export const currentUserUpdateError = data => ({
 export const updateCurrentUserPasswordRequest = data => ({
   type: CURRENT_USER_UPDATE_PASSWORD_REQUEST,
   data
+});
+
+export const manageBalanceRequest = data => ({
+  type: MANAGE_BALANCE_REQUEST,
+  data,
 });

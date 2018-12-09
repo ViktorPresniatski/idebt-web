@@ -16,6 +16,7 @@ import { ConnectedRouter } from 'connected-react-router/immutable';
 import FontFaceObserver from 'fontfaceobserver';
 import createHistory from 'history/createBrowserHistory';
 import 'sanitize.css/sanitize.css';
+import 'react-credit-cards/es/styles-compiled.css';
 
 // Import root app
 import App from 'containers/App';

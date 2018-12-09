@@ -18,14 +18,5 @@ export const DEBTS_I_OWE_PATH = 'debts/i_owe/';
 export const DEBTS_OWE_ME_PATH = 'debts/owe_me/';
 export const REPAY_DEBT_PATH = 'repay/';
 
-// [Common]
-export const META_PATH = 'meta/';
-export const META_DATA_PATH = 'meta_data/';
-
-// [Validations]
-const VALIDATIONS = 'validations/';
-export const CHECK_TOKEN_PATH = `${VALIDATIONS}check_token/`;
-
-// [Password]
-export const RECOVER_PASSWORD_PATH = 'auth/recover_password/';
-export const RESET_PASSWORD_PATH = 'auth/reset_password/';
+export const REPLENISH_BALANCE_PATH = 'balance/replenish/';
+export const WITHDRAW_BALANCE_PATH = 'balance/withdraw/';
