@@ -26,6 +26,7 @@ export const createMatchApi = data => post(PATHS.MATCH_PATH, true, data);
 export const getIssuesDebtsApi = () => get(PATHS.DEBTS_I_OWE_PATH, true);
 export const getOffersDebtsApi = () => get(PATHS.DEBTS_OWE_ME_PATH, true);
 export const repayDebtApi = data => post(`${PATHS.DEBTS_PATH}${data.id}/${PATHS.REPAY_DEBT_PATH}`, true, data);
+export const getContractApi = data => get(`${PATHS.DEBTS_PATH}${data.debtId}/${PATHS.CONTRACT_PATH}`, true);
 
 export const replenishBalanceApi = data =>
   post(`${PATHS.CURRENT_USER_PATH}${data.userId}/${PATHS.REPLENISH_BALANCE_PATH}`, true, data);

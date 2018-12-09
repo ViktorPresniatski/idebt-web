@@ -48,11 +48,6 @@ class SignInForm extends React.Component {
           onChange={this.handleIdentityChange}
           validate={FIELDS_VALIDATIONS.password}
         />
-        <div className="right forgot_password__link">
-          <Link className="link" to="/recovery_password">
-            {formatMessage(messages.forgotPasswordLinkText)}
-          </Link>
-        </div>
         <div className="center">
           <GreenButton type="primary" htmlType="submit" disabled={submitting || invalid}>
             {formatMessage(messages.signInButtonText)}

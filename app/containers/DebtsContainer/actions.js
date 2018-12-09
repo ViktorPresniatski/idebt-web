@@ -3,6 +3,7 @@ import {
   GET_ISSUES_DEBTS_SUCCESS,
   GET_OFFERS_DEBTS_REQUEST,
   GET_OFFERS_DEBTS_SUCCESS,
+  GET_CONTRACT_REQUEST,
   REPAY_DEBT_REQUEST,
 } from './constants';
 
@@ -28,3 +29,9 @@ export const repayDebtRequest = data => ({
   type: REPAY_DEBT_REQUEST,
   data,
 });
+
+export const getContractRequest = data => ({
+  type: GET_CONTRACT_REQUEST,
+  data,
+});
+

@@ -17,6 +17,7 @@ export const DEBTS_PATH = 'debts/';
 export const DEBTS_I_OWE_PATH = 'debts/i_owe/';
 export const DEBTS_OWE_ME_PATH = 'debts/owe_me/';
 export const REPAY_DEBT_PATH = 'repay/';
+export const CONTRACT_PATH = 'contract/';
 
 export const REPLENISH_BALANCE_PATH = 'balance/replenish/';
 export const WITHDRAW_BALANCE_PATH = 'balance/withdraw/';

@@ -74,10 +74,14 @@ body.fontLoaded {
   top: 0;
   left: 0;
   right: 0;
-  background: #246097;
-  background: -moz-linear-gradient(left, #246097 0%, #235c91 20%, #246097 41%, #3e87bb 56%, #73c1ee 75%, #d6effc 88%, #dbecf6 100%);
-  background: -webkit-linear-gradient(left, #246097 0%, #235c91 20%, #246097 41%, #3e87bb 56%, #73c1ee 75%, #d6effc 88%, #dbecf6 100%);
-  background: linear-gradient(to right, #246097 0%, #235c91 20%, #246097 41%, #3e87bb 56%, #73c1ee 75%, #d6effc 88%, #dbecf6 100%);
+  background: #8a2387; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #8a2387, #e94057, #f27121, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #8a2387, #e94057, #f27121, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  // background: #246097;
+  // background: -moz-linear-gradient(left, #246097 0%, #235c91 20%, #246097 41%, #3e87bb 56%, #73c1ee 75%, #d6effc 88%, #dbecf6 100%);
+  // background: -webkit-linear-gradient(left, #246097 0%, #235c91 20%, #246097 41%, #3e87bb 56%, #73c1ee 75%, #d6effc 88%, #dbecf6 100%);
+  // background: linear-gradient(to right, #246097 0%, #235c91 20%, #246097 41%, #3e87bb 56%, #73c1ee 75%, #d6effc 88%, #dbecf6 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#246097', endColorstr='#dbecf6', GradientType=1);
   z-index: 2;
 }
