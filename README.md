@@ -1,4 +1,4 @@
-## Sparkx5 React.js
+## IDebt React.js
 
 # How to install
 
