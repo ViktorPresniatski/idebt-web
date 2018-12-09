@@ -67,13 +67,16 @@ class IssuesList extends React.Component {
   render() {
     const { issues } = this.props;
 
+    if (!issues || issues.results.length === 0) {
+      return <div className="content__wrapper empty-message">There are no issues yet</div>;
+    }
+
     return (
       <div className="content__wrapper monthly-questions-wrapper">
         <div>
           <div className="form-wrapper">
             <Collapse>
-              {issues &&
-                issues.results.map(issue => (
+              {issues.results.map(issue => (
                   <Panel header={this.renderHeader(issue)} key={issue.id}>
                     <Row justify="center" className="wisdom-container">
                       <Row gutter={16} className="wisdom-info-modal-row">

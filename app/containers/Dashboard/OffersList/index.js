@@ -67,13 +67,16 @@ class OffersList extends React.Component {
   render() {
     const { offers } = this.props;
 
+    if (!offers || offers.results.length === 0) {
+      return <div className="content__wrapper empty-message">There are no offers yet</div>;
+    }
+
     return (
       <div className="content__wrapper monthly-questions-wrapper">
         <div>
           <div className="form-wrapper">
             <Collapse>
-              {offers &&
-                offers.results.map(offer => (
+              {offers.results.map(offer => (
                   <Panel header={this.renderHeader(offer)} key={offer.id}>
                     <Row justify="center" className="wisdom-container">
                       <Row gutter={16} className="wisdom-info-modal-row">

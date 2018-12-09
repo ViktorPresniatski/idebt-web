@@ -20,15 +20,17 @@ const Panel = Collapse.Panel;
 class DebtsOnOffers extends React.Component {
   render() {
     const { offersDebts } = this.props;
-    console.log(offersDebts);
+
+    if (!offersDebts || offersDebts.results.length === 0) {
+      return <div className="content__wrapper empty-message">There are no debts yet</div>;
+    }
 
     return (
       <div className="content__wrapper monthly-questions-wrapper">
         <div>
           <div className="form-wrapper">
             <Collapse>
-              {offersDebts &&
-                offersDebts.results.map(debt => (
+              {offersDebts.results.map(debt => (
                   <Panel header={`ID: ${debt.id}. Debt with loan ${debt.loan_size}`} key={debt.id}>
                     <Debt debt={debt} />
                   </Panel>
