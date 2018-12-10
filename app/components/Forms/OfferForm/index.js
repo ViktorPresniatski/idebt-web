@@ -7,7 +7,7 @@ import { reduxForm, Field } from 'redux-form/immutable';
 import { CheckboxField } from 'components/Fields';
 import { Row, Col } from 'antd';
 
-import { required, email, onlyNumber, equalWithPassword } from 'utils/validations';
+import { required, email, onlyNumber, onlyNumberWithFloat, equalWithPassword } from 'utils/validations';
 import { InputField } from 'components/Fields';
 import { GreenButton } from 'components/Controls';
 import './styles.scss';
@@ -30,7 +30,7 @@ class OfferForm extends React.Component {
           component={InputField}
           label="Credit fund"
           onChange={this.handleIdentityChange}
-          validate={[required, onlyNumber]}
+          validate={[required, onlyNumberWithFloat]}
           inlineLabel
         />
         <Field
@@ -39,7 +39,7 @@ class OfferForm extends React.Component {
           component={InputField}
           label="Minimum loan size"
           onChange={this.handleIdentityChange}
-          validate={[required, onlyNumber]}
+          validate={[required, onlyNumberWithFloat]}
           inlineLabel
         />
         <Field
@@ -48,7 +48,7 @@ class OfferForm extends React.Component {
           component={InputField}
           label="Maximum loan size"
           onChange={this.handleIdentityChange}
-          validate={[required, onlyNumber]}
+          validate={[required, onlyNumberWithFloat]}
           inlineLabel
         />
         <Field
@@ -57,7 +57,7 @@ class OfferForm extends React.Component {
           component={InputField}
           label="Credit percentage"
           onChange={this.handleIdentityChange}
-          validate={required}
+          validate={[required, onlyNumberWithFloat]}
           inlineLabel
         />
         <Field

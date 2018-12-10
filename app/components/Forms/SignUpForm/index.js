@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { intlShape, injectIntl } from 'react-intl';
 import { reduxForm, Field } from 'redux-form/immutable';
 
-import { required, email, onlyNumber, equalWithPassword, minLength8 } from 'utils/validations';
+import { required, email, onlyNumberWithFloat, equalWithPassword, minLength8 } from 'utils/validations';
 import { InputField } from 'components/Fields';
 import { GreenButton } from 'components/Controls';
 import './styles.scss';
@@ -92,7 +92,7 @@ class SignInForm extends React.Component {
           component={InputField}
           label="Annual income, $"
           onChange={this.handleIdentityChange}
-          validate={[required, onlyNumber]}
+          validate={[required, onlyNumberWithFloat]}
           inlineLabel
         />
         <Field

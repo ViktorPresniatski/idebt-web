@@ -30,8 +30,8 @@ class DebtsOnOffers extends React.Component {
           <div className="form-wrapper">
             <Collapse>
               {offersDebts.results.map(debt => (
-                <Panel header={`ID: ${debt.id}. Debt with loan ${debt.current_size}`} key={debt.id}>
-                  <Debt debt={debt} getContract={this.props.getContractRequest} />
+                <Panel header={`ID: ${debt.id}. Debt with loan ${debt.current_size} $`} key={debt.id}>
+                  <Debt debt={debt} debtType="offers" getContract={this.props.getContractRequest} />
                 </Panel>
               ))}
             </Collapse>

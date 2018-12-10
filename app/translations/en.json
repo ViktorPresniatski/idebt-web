@@ -83,8 +83,8 @@
   "layouts.links.analyticsLink": "Analytics",
 
   "signIn.title": "Log in to your account",
-  "signIn.emailFieldLabel": "Enter your email",
-  "signIn.emailFieldPlaceholder": "Enter your email",
+  "signIn.emailFieldLabel": "Enter your username",
+  "signIn.emailFieldPlaceholder": "Enter your username",
   "signIn.passwordFieldLabel": "Enter your password",
   "signIn.passwordFieldPlaceholder": "Enter your password",
   "signIn.forgotPasswordLinkText": "Forgot password?",

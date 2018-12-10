@@ -12,6 +12,7 @@ import { GreenButton } from 'components/Controls';
 import './styles.scss';
 
 const OPERATIONS = [{ label: 'Replenish', value: 'replenish' }, { label: 'Withdraw', value: 'withdraw' }];
+const CURRENCIES = [{ label: 'USD', value: 'USD' }, { label: 'EUR', value: 'EUR' }, { label: 'BYN', value: 'BYN' }];
 
 class ManageBalanceForm extends React.Component {
   handleIdentityChange = () => {
@@ -30,6 +31,16 @@ class ManageBalanceForm extends React.Component {
           component={RadioField}
           label="Operation"
           options={OPERATIONS}
+          validate={required}
+          onChange={this.handleIdentityChange}
+          validate={required}
+          inlineLabel
+        />
+        <Field
+          name="currency"
+          component={RadioField}
+          label="Currency"
+          options={CURRENCIES}
           validate={required}
           onChange={this.handleIdentityChange}
           validate={required}

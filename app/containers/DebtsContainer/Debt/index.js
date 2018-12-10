@@ -1,26 +1,37 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 
+const MESSAGES = {
+  issues: {
+    loanSize: 'You borrowed',
+    currentSize: 'Your debt now',
+  },
+  offers: {
+    loanSize: 'Was borrowed',
+    currentSize: 'Borrower debt now',
+  },
+};
+
 export default function Debt(props) {
-  const { debt, button } = props;
+  const { debt, button, debtType } = props;
   const { API_URL } = process.env;
 
   return (
     <Row justify="center" className="wisdom-container">
       <Row gutter={16} className="wisdom-info-modal-row">
         <Col offset={4} span={12} className="wisdom-info-modal-column-label">
-          You borrowed
+          {MESSAGES[debtType].loanSize}
         </Col>
         <Col span={8} className="wisdom-info-modal-column-content">
-          {debt.loan_size}
+          {debt.loan_size} $
         </Col>
       </Row>
       <Row gutter={16} className="wisdom-info-modal-row">
         <Col offset={4} span={12} className="wisdom-info-modal-column-label">
-          Your debt now
+          {MESSAGES[debtType].currentSize}
         </Col>
         <Col span={8} className="wisdom-info-modal-column-content">
-          {debt.current_size}
+          {debt.current_size} $
         </Col>
       </Row>
       <Row gutter={16} className="wisdom-info-modal-row">

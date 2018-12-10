@@ -7,7 +7,7 @@ import { reduxForm, Field } from 'redux-form/immutable';
 import { CheckboxField } from 'components/Fields';
 import { Row, Col } from 'antd';
 
-import { required, email, onlyNumber, equalWithPassword } from 'utils/validations';
+import { required, email, onlyNumber, onlyNumberWithFloat, equalWithPassword } from 'utils/validations';
 import { InputField } from 'components/Fields';
 import { GreenButton } from 'components/Controls';
 import './styles.scss';
@@ -30,7 +30,7 @@ class IssueForm extends React.Component {
           component={InputField}
           label="Amount"
           onChange={this.handleIdentityChange}
-          validate={[required, onlyNumber]}
+          validate={[required, onlyNumberWithFloat]}
           inlineLabel
         />
         <Field
@@ -39,7 +39,7 @@ class IssueForm extends React.Component {
           component={InputField}
           label="Maximum overpay"
           onChange={this.handleIdentityChange}
-          validate={[required, onlyNumber]}
+          validate={[required, onlyNumberWithFloat]}
           inlineLabel
         />
         <Field

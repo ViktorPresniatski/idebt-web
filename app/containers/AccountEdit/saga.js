@@ -20,6 +20,7 @@ export function* currentUserUpdate(action) {
   try {
     const response = yield call(updateCurrentUserApi, data);
     yield call(handleSuccess);
+    yield put(getCurrentUserRequest());
   } catch (errors) {
     if (errors.status === 400) {
       yield call(handleErrors, errors.data);

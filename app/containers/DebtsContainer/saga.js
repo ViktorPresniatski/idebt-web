@@ -2,8 +2,9 @@ import { call, put, takeLatest } from 'redux-saga/effects';
 
 import { getIssuesDebtsApi, getOffersDebtsApi, repayDebtApi } from 'api/requests';
 
-import { GET_ISSUES_DEBTS_REQUEST, GET_OFFERS_DEBTS_REQUEST, REPAY_DEBT_REQUEST } from './constants';
+import { getCurrentUserRequest } from 'containers/App/actions';
 
+import { GET_ISSUES_DEBTS_REQUEST, GET_OFFERS_DEBTS_REQUEST, REPAY_DEBT_REQUEST } from './constants';
 import { getIssuesDebtsRequest, getIssuesDebtsSuccess, getOffersDebtsSuccess } from './actions';
 
 export function* getIssuesDebts() {
@@ -22,6 +23,7 @@ export function* repayDebt(action) {
     yield call(repayDebtApi, data);
     yield call(handleSuccess);
     yield put(getIssuesDebtsRequest());
+    yield put(getCurrentUserRequest());
   } catch (errors) {
     if (errors.status === 400 || errors.status === 422) {
       yield call(handleErrors, errors.data);

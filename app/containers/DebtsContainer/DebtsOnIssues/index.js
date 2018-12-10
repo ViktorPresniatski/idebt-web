@@ -54,8 +54,8 @@ class DebtsOnIssues extends React.Component {
           <div className="form-wrapper">
             <Collapse>
               {issuesDebts.results.map(debt => (
-                <Panel header={`ID: ${debt.id}. Debt with loan ${debt.loan_size}`} key={debt.id}>
-                  <Debt debt={debt} button={this.renderPayButton(debt)} />
+                <Panel header={`ID: ${debt.id}. Debt with loan ${debt.current_size} $`} key={debt.id}>
+                  <Debt debt={debt} debtType="issues" button={this.renderPayButton(debt)} />
                 </Panel>
               ))}
             </Collapse>

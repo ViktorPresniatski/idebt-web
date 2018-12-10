@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { reduxForm, Field } from 'redux-form/immutable';
 
-import { required, email, onlyNumber, equalWithPassword, minLength8 } from 'utils/validations';
+import { required, email, onlyNumberWithFloat, equalWithPassword, minLength8 } from 'utils/validations';
 import { InputField } from 'components/Fields';
 import { GreenButton } from 'components/Controls';
 import './styles.scss';
@@ -29,7 +29,7 @@ class AccountPersonalInfoForm extends React.Component {
           name="annual_income"
           component={InputField}
           label="Annual income, $"
-          validate={[required, onlyNumber]}
+          validate={[required, onlyNumberWithFloat]}
           inlineLabel
         />
         <Field name="telephone" component={InputField} label="Phone number" validate={required} inlineLabel />

@@ -6,7 +6,7 @@ export default function Offer(props) {
   // debugger
   return (
     <div>
-      <h2>Offer</h2>
+      <h2 className="tinder-title">Offer</h2>
       <Row justify="center" className="wisdom-container">
         <Row gutter={16} className="wisdom-info-modal-row">
           <Col offset={4} span={12} className="wisdom-info-modal-column-label">
@@ -16,6 +16,7 @@ export default function Offer(props) {
             {item.credit_percentage} %
           </Col>
         </Row>
+        <hr />
         <Row gutter={16} className="wisdom-info-modal-row">
           <Col offset={4} span={12} className="wisdom-info-modal-column-label">
             With capitalization
@@ -24,6 +25,7 @@ export default function Offer(props) {
             {item.is_with_capitalization ? 'Yes' : 'No'}
           </Col>
         </Row>
+        <hr />
         <Row gutter={16} className="wisdom-info-modal-row">
           <Col offset={4} span={12} className="wisdom-info-modal-column-label">
             Grace period
@@ -32,6 +34,7 @@ export default function Offer(props) {
             {item.grace_period} days
           </Col>
         </Row>
+        <hr />
         <Row gutter={16} className="wisdom-info-modal-row">
           <Col offset={4} span={12} className="wisdom-info-modal-column-label">
             Return period
